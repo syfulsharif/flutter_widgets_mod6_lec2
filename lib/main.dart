@@ -60,7 +60,7 @@ class HomeScreen extends StatelessWidget {
               padding: EdgeInsets.all(16.0),
               child: TextField(
                 controller: _userNameTextEditingController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   label: Text('User Name'),
                   hintText: 'Enter your username',
                 ),
@@ -74,6 +74,17 @@ class HomeScreen extends StatelessWidget {
                 _userNameTextEditingController.clear();
               },
               child: Text('Show'),
+            ),
+            ListTile(
+              onTap: () {
+                print('ListTile Tapped');
+              },
+              title: Text('Username'),
+              subtitle: Text('Designation'),
+              leading: Icon(Icons.account_circle_rounded),
+              trailing: Icon(Icons.arrow_forward_outlined),
+              tileColor: Colors.grey.shade300.withOpacity(0.5),
+              contentPadding: EdgeInsets.symmetric(horizontal: 10.0),
             )
           ],
         ),
