@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
   final TextEditingController _emailTextEditingController =
       TextEditingController();
   final TextEditingController _userNameTextEditingController =
-  TextEditingController();
+      TextEditingController();
 
   HomeScreen({super.key});
 
@@ -29,7 +29,17 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Module 6: Live 2'),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.menu),
+            ),
+            const Text('Module 6: Live 2'),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.notifications_none))
+          ],
+        ),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -40,8 +50,10 @@ class HomeScreen extends StatelessWidget {
               padding: EdgeInsets.all(16.0),
               child: TextField(
                 controller: _emailTextEditingController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   label: Text('Email'),
+                  border: OutlineInputBorder(),
+                  hintText: 'Enter Your Email',
                 ),
               ),
             ),
@@ -51,6 +63,7 @@ class HomeScreen extends StatelessWidget {
                 controller: _userNameTextEditingController,
                 decoration: InputDecoration(
                   label: Text('User Name'),
+                  hintText: 'Enter your username',
                 ),
               ),
             ),
