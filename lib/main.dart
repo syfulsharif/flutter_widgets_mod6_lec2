@@ -29,18 +29,17 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.menu),
-            ),
-            const Text('Module 6: Live 2'),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.notifications_none))
-          ],
+        leading: IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.menu),
         ),
-        centerTitle: true,
+        title: const Text('Module 6: Live 2'),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.notifications_none),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
