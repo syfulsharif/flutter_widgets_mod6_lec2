@@ -46,7 +46,7 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               child: TextField(
                 controller: _emailTextEditingController,
                 decoration: const InputDecoration(
@@ -57,7 +57,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               child: TextField(
                 controller: _userNameTextEditingController,
                 decoration: const InputDecoration(
@@ -85,7 +85,76 @@ class HomeScreen extends StatelessWidget {
               trailing: Icon(Icons.arrow_forward_outlined),
               tileColor: Colors.grey.shade300.withOpacity(0.5),
               contentPadding: EdgeInsets.symmetric(horizontal: 10.0),
-            )
+            ),
+            Wrap(
+              alignment: WrapAlignment.start,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    print(_emailTextEditingController.text);
+                    print(_userNameTextEditingController.text);
+                    _emailTextEditingController.clear();
+                    _userNameTextEditingController.clear();
+                  },
+                  child: Text('Show'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    print(_emailTextEditingController.text);
+                    print(_userNameTextEditingController.text);
+                    _emailTextEditingController.clear();
+                    _userNameTextEditingController.clear();
+                  },
+                  child: Text('Show'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    print(_emailTextEditingController.text);
+                    print(_userNameTextEditingController.text);
+                    _emailTextEditingController.clear();
+                    _userNameTextEditingController.clear();
+                  },
+                  child: Text('Show'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    print(_emailTextEditingController.text);
+                    print(_userNameTextEditingController.text);
+                    _emailTextEditingController.clear();
+                    _userNameTextEditingController.clear();
+                  },
+                  child: Text('Show'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    print(_emailTextEditingController.text);
+                    print(_userNameTextEditingController.text);
+                    _emailTextEditingController.clear();
+                    _userNameTextEditingController.clear();
+                  },
+                  child: Text('Show'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    print(_emailTextEditingController.text);
+                    print(_userNameTextEditingController.text);
+                    _emailTextEditingController.clear();
+                    _userNameTextEditingController.clear();
+                  },
+                  child: Text('Show'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    print(_emailTextEditingController.text);
+                    print(_userNameTextEditingController.text);
+                    _emailTextEditingController.clear();
+                    _userNameTextEditingController.clear();
+                  },
+                  child: Text('Show'),
+                ),
+
+              ],
+            ),
           ],
         ),
       ),
