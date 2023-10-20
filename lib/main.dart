@@ -11,14 +11,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: HomeScreen(),
     );
   }
 }
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  final TextEditingController _emailTextEditingController =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +28,21 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Module 6: Live 2'),
         centerTitle: true,
       ),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
               padding: EdgeInsets.all(16.0),
               child: TextField(
-
+                controller: _emailTextEditingController,
               ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                print(_emailTextEditingController.text);
+              },
+              child: Text('Show'),
             )
           ],
         ),
